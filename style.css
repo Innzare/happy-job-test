@@ -29,6 +29,9 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: 10px;
+   border-radius: 8px;
+   box-shadow: 0 0 5px 5px rgba(0,0,0, 0.2);
 }
 
 .progressbar__track {
@@ -203,6 +206,18 @@ fill: #ff0036;
    border-bottom-left-radius: 8px;
 }
 
+.graphic-load__first.yellow{
+   width: 39.1%;
+}
+
+.graphic-load__first.red{
+   width: 79.8%;
+}
+
+.graphic-load__sec.green{
+   width: 80%;
+}
+
 .graphic-load__first.green, .graphic-load__sec.green{
    background-color: #70A74B;
 }
@@ -214,6 +229,8 @@ fill: #ff0036;
 }
 
 .graphic-load__num {
+   position: relative;
+   z-index: 1;
    font-size: 14px;
    color: #5d5d5d;
 }
