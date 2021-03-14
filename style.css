@@ -1,0 +1,219 @@
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url("./font/GothamPro.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Arial";
+}
+.card-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+}
+.card {
+   padding: 10px;
+   background-color: #000;
+}
+.progress__container {
+   /* width: 150px;
+   height: 150px; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.progressbar__track {
+fill: transparent;
+stroke: #ededed;
+stroke-width: 2px;
+}
+
+.progressbar__thumb {
+fill: transparent;
+stroke: #ff0036;
+stroke-width: 2px;
+transform-origin: center;
+/* stroke-dasharray: 0 1; */
+/* transform: rotate(180deg); */
+}
+
+.progressbar text {
+font-family: 'Lato', sans-serif;
+font-weight: 400;
+}
+
+.progressbar text tspan {
+fill: #ff0036;
+}
+
+#arc2, #arc3 {
+   animation-name: active-path;
+   animation-fill-mode: forwards;
+   animation-duration: .7s;
+   animation-timing-function: linear;
+   /* animation-direction: reverse; */
+}
+#arc3{
+   visibility: hidden;
+   animation-delay: .7s;
+}
+
+@keyframes active-path {
+   0%{
+      stroke-dashoffset: 0;
+      stroke-dasharray: 0, 330;
+   }
+   100%{
+      stroke-dashoffset: 330;
+      stroke-dasharray: 330, 0;
+   }
+}
+
+.diagramm{
+   position: relative;
+}
+
+.progress-bar-text{
+   position: absolute;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.progress-bar-text .percent{
+   display: flex;
+   font-size: 38px;
+   justify-content: center;
+   font-family: "Gotham Pro";
+}
+
+.percent-symbol{
+   color: #9C9B99;
+}
+
+.progress-bar-text .percent > span{
+   display: flex;
+   flex-direction: column;
+   font-size: 16px;
+   align-items: center;
+}
+
+.progress-bar-text p{
+   text-align: center;
+}
+
+.progress-bar-text .loyal{
+   margin: 10px 0;
+   letter-spacing: 1px;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.progress-bar-text .yellow{
+   color: #FBD229;
+   font-weight: bold;
+}
+
+.progress-bar-text .grey{
+   color: #b7b2b2;
+   font-size: 11px;
+   margin-bottom: 5px;
+}
+
+.progress-bar-text .change{
+   color: green;
+}
+
+
+
+.indicators {
+   margin-top: 30px;
+   width: 100%;
+   padding: 0 30px;
+}
+.indicator-item {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+}
+.indicator-item__title {
+   flex: 0 0 30%;
+   font-size: 14px;
+   font-weight: bold;
+   margin-right: 20px;
+   color: #555;
+}
+.indicator-item__graphic {
+   display: flex;
+   font-size: 14px;
+}
+.graphic-left {
+}
+.graphic-percent {
+}
+.graphic-human {
+   color: #999;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   margin-top: 5px;
+}
+.graphic-human svg{
+   margin-left: 5px;
+}
+.graphic-right {
+   position: relative;
+   width: 100px;
+   height: 100%;
+   margin-left: 10px;
+   border: 1px solid #ECECEC;
+   border-radius: 8px;
+   background-color: #F9F9F9;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding-right: 5px;
+}
+
+.graphic-load__first {
+   position: absolute;
+   top: -1px;
+   left: 0;
+   height: 85%;
+   width: 30%;
+   border-top-left-radius: 8px;
+}
+.graphic-load__sec {
+   position: absolute;
+   bottom: -1px;
+   left: 0;
+   height: 25%;
+   width: 27%;
+   opacity: 0.7;
+   border-bottom-left-radius: 8px;
+}
+
+.graphic-load__first.green, .graphic-load__sec.green{
+   background-color: #70A74B;
+}
+.graphic-load__first.yellow, .graphic-load__sec.yellow{
+   background-color: #FBD229;
+}
+.graphic-load__first.red, .graphic-load__sec.red{
+   background-color: #ED5243;
+}
+
+.graphic-load__num {
+   font-size: 14px;
+   color: #5d5d5d;
+}
